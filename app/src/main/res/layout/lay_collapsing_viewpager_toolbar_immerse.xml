@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created on 16/6/15 @author ice, GitHub: https://github.com/XunMengWinter
+ 该布局为通用型沉浸式头视图,
+ 包含了一个ImageViewPager与Toolbar,
+ 使用方法，将该视图置于CoordinatorLayout中的第一个位置(include),
+ 确保其所在Activity主题是@style/AppTheme.NoActionBar
+ -->
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/app_bar_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="256dp"
+    android:fitsSystemWindows="false"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    >
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapsing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:fitsSystemWindows="true"
+        app:contentScrim="@color/colorPrimaryAlpha"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        >
+
+        <!--ImageView可替换成任意视图控件-->
+        <ImageView
+            android:id="@+id/banner_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/img_huoer"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="@dimen/height_status_bar"
+            android:title="@string/app_name"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name"
+            >
+            <!--CollapsingToolbarLayout内的toolBar标题栏随拖动而变化，
+            所以在定义了一个TextView可满足标题栏不变化的业务逻辑-->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/title_tv"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:tabSelectedTextColor="#333"
+        app:tabTextColor="#888"
+        >
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello"/>
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="world"/>
+    </android.support.design.widget.TabLayout>
+
+</android.support.design.widget.AppBarLayout>

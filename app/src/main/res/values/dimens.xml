@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--api19以下无法沉浸头部，故设为0-->
+    <dimen name="height_status_bar">0dp</dimen>
+</resources>

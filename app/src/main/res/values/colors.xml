@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/google_green</color>
+    <color name="colorPrimaryDark">@color/google_green</color>
+    <color name="colorAccent">@color/google_orange</color>
+
+    <!--C号透明我喜欢-->
+    <color name="colorPrimaryAlpha">#cc34a853</color>
+
+    <color name="google_blue">#4285f4</color>
+    <color name="google_red">#ea4335</color>
+    <color name="google_orange">#fbbc05</color>
+    <color name="google_green">#34a853</color>
+</resources>
