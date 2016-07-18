@@ -93,6 +93,9 @@ public class HomeFragment extends Fragment implements Toolbar.OnMenuItemClickLis
                 intent = Intent.createChooser(intent, "Share to");
                 startActivity(intent);
                 return true;
+            case R.id.action_nested_list:
+                startActivity(new Intent(getActivity(),NestedListActivity.class));
+                return true;
         }
         return false;
     }

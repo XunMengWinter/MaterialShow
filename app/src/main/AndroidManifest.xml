@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".NestedListActivity"
+            android:theme="@style/AppTheme.NoActionBar.Immerse"
+            />
+
     </application>
 
 </manifest>
